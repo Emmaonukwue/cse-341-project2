@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Emmaonukwue/cse-341-project2/issues"
   },
-  "homepage": "https://github.com/Emmaonukwue/cse-341-project2#readme"
+  "homepage": "https://github.com/Emmaonukwue/cse-341-project2#readme",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongodb": "^7.0.0"
+  }
 }

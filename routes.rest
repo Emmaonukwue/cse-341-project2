@@ -1,0 +1,6 @@
+###getAll developers
+http://localhost:3000/developers 
+
+###getSingle by id
+http://localhost:3000/developers/6928530cd9dc73c4fa808b59
+
