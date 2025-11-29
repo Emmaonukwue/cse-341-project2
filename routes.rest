@@ -1,6 +1,60 @@
 ###getAll developers
-http://localhost:3000/developers 
+GET http://localhost:3000/developers 
 
 ###getSingle by id
-http://localhost:3000/developers/6928530cd9dc73c4fa808b59
+GET http://localhost:3000/developers/6928a6eeb176a52282ea4dc8
 
+
+### createDeveloper
+POST http://localhost:3000/developers HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "dev003",
+  "name": "Eric Gugua",
+  "email": "egugua@gmail.com",
+  "photos": [
+    { "id": "1", "name": "headshot" },
+    { "id": "2", "name": "fullshot" }
+  ],
+  "projects": [
+    {
+      "id": "proj001",
+      "name": "Portfolio Website3",
+      "url": "https://example3.com",
+      "photos": [
+        { "id": "img001", "name": "portfolio-cover.jpg" },
+        { "id": "img002", "name": "screenshot-homepage.jpg" }
+      ]
+    }
+  ]
+}
+
+### updateDeveloper
+PUT http://localhost:3000/developers/6928a6eeb176a52282ea4dc8 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "dev003",
+  "name": "Uchendu Emerie",
+  "email": "emerieuche@gmail.com",
+  "photos": [
+    { "id": "1", "name": "headshot" },
+    { "id": "2", "name": "fullshot" }
+  ],
+  "projects": [
+    {
+      "id": "proj001",
+      "name": "Portfolio Website3",
+      "url": "https://example3.com",
+      "photos": [
+        { "id": "img001", "name": "portfolio-cover.jpg" },
+        { "id": "img002", "name": "screenshot-homepage.jpg" }
+      ]
+    }
+  ]
+}
+
+
+### deleteDeveloper by ID
+DELETE http://localhost:3000/developers/6928a6eeb176a52282ea4dc8 HTTP/1.1

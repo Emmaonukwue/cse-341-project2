@@ -6,4 +6,9 @@ const developersController = require('../controllers/developers');
 router.get('/', developersController.getAll);
 router.get('/:id', developersController.getSingle);
 
-module.exports = router;
+router.post('/', developersController.createDeveloper);
+router.put('/:id', developersController.updateDeveloper);
+
+router.delete('/:id', developersController.deleteDeveloper);
+
+module.exports = router
