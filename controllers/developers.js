@@ -2,23 +2,31 @@ const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
-    //#swagger.tags=['Developers']
-    const result = await mongodb.getDatabase().db().collection('developers').find();
-    result.toArray().then((developers) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(developers);
-    })
-}
+    try {
+      //#swagger.tags=['Developers']
+      const result = await mongodb.getDatabase().db().collection('developers').find();
+      result.toArray().then((developers) => {
+          res.setHeader('Content-Type', 'application/json');
+          res.status(200).json(developers);
+      })
+    } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+};
 
 const getSingle = async (req, res) => {
-    //#swagger.tags=['Developers']
-    const developerId = new ObjectId(req.params.id);
-    const result = await mongodb.getDatabase().db().collection('developers').find({_id: developerId});
-    result.toArray().then((developers) => {
-        res.setHeader('Content-Type', 'application/json')
-        res.status(200).json(developers);
-    })
-}
+    try {
+      //#swagger.tags=['Developers']
+      const developerId = new ObjectId(req.params.id);
+      const result = await mongodb.getDatabase().db().collection('developers').find({_id: developerId});
+      result.toArray().then((developers) => {
+          res.setHeader('Content-Type', 'application/json')
+          res.status(200).json(developers);
+      })  
+    } catch (err) {
+      res.status(400).json({ message: err.message });
+    }
+};
 
 const createDeveloper = async (req, res) => {
   try {

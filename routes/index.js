@@ -9,5 +9,7 @@ router.get('/', (req, res) => {
 
 router.use('/developers', require('./developers'));
 
+router.use('/locations', require('./locations'));
+
 module.exports = router;
 

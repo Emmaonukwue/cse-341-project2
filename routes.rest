@@ -11,8 +11,8 @@ Content-Type: application/json
 
 {
   "id": "dev003",
-  "name": "Silvia Glory",
-  "email": "silviadev@gmail.com",
+  "name": "Stanley Bezoz",
+  "email": "stbezoz_dev@gmail.com",
   "photos": [
     { "id": "1", "name": "headshot" }
   ],
@@ -20,7 +20,7 @@ Content-Type: application/json
     {
       "id": "proj001",
       "name": "Portfolio Website4",
-      "url": "https://example4.com",
+      "url": "https://mdesign.it.com",
       "photos": [
         { "id": "img001", "name": "portfolio-cover.jpg" },
         { "id": "img002", "name": "screenshot-homepage.jpg" }
@@ -30,13 +30,13 @@ Content-Type: application/json
 }
 
 ### updateDeveloper
-PUT https://cse-341-project2-01q7.onrender.com/developers/6928cfee59491059eab5bf47 HTTP/1.1
+PUT https://cse-341-project2-01q7.onrender.com/developers/692add7c9cab88f479fc243b HTTP/1.1
 Content-Type: application/json
 
 {
-  "id": "dev003",
-  "name": "Uchendu Emerie",
-  "email": "emerieuche@gmail.com",
+  "id": "dev008",
+  "name": "Stanley Bezoz",
+  "email": "stbezoz_dev@gmail.com",
   "photos": [
     { "id": "1", "name": "headshot" },
     { "id": "2", "name": "fullshot" }
@@ -56,4 +56,49 @@ Content-Type: application/json
 
 
 ### deleteDeveloper by ID
-DELETE https://cse-341-project2-01q7.onrender.com/developers/692a98e40522fd3bd7d4e03b HTTP/1.1
+DELETE https://cse-341-project2-01q7.onrender.com/developers/692add7c9cab88f479fc243b HTTP/1.1
+
+
+
+### getSingle locations 
+GET https://cse-341-project2-01q7.onrender.com/locations 
+
+### getSingle location local
+GET https://cse-341-project2-01q7.onrender.com/locations/692c96a8e0f120e0a2a87a13
+
+
+### createLocation local
+POST https://cse-341-project2-01q7.onrender.com/locations 
+Content-Type: application/json
+
+{
+  "city": "Abuja",
+  "state": "FCT",
+  "country": "Nigeria",
+  "flag": "nigeria-big-flag.png",
+  "photo": "nigeria-landscape.jpg",
+  "continent": "Africa",
+  "dialCode": "234",
+  "currency": "Naira",
+  "language": "English"
+}
+
+
+### createLocation local
+PUT https://cse-341-project2-01q7.onrender.com/locations/692ca5d99a77ad7e60b5e307 HTTP/1.1
+Content-Type: application/json
+
+{
+  "city": "Abuja",
+  "state": "FCT",
+  "country": "Nigeria",
+  "flag": "nigerian-big-flag.png",
+  "photo": "nigeria-landscape.jpg",
+  "continent": "Africa",
+  "dialCode": "234",
+  "currency": "Naira",
+  "language": "English"
+}
+
+### createLocation local
+DELETE https://cse-341-project2-01q7.onrender.com/locations/692c96a8e0f120e0a2a87a13
