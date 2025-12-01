@@ -5,7 +5,7 @@
     "description": "Developers Api",
     "version": "1.0.0"
   },
-  "host": "cse-341-project2-01q7.onrender.com/",
+  "host": "cse-341-project2-01q7.onrender.com",
   "basePath": "/",
   "schemes": [
     "http",
