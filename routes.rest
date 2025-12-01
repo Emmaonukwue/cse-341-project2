@@ -22,7 +22,7 @@ Content-Type: application/json
       "name": "Portfolio Website4",
       "url": "https://mdesign.it.com",
       "photos": [
-        { "id": "img001", "name": "portfolio-cover.jpg" },
+        { "id": "img001", "name": "portfolio-cover.png" },
         { "id": "img002", "name": "screenshot-homepage.jpg" }
       ]
     }
@@ -30,7 +30,7 @@ Content-Type: application/json
 }
 
 ### updateDeveloper
-PUT https://cse-341-project2-01q7.onrender.com/developers/692add7c9cab88f479fc243b HTTP/1.1
+PUT https://cse-341-project2-01q7.onrender.com/developers/692d7e3133069074462639e4 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -47,7 +47,7 @@ Content-Type: application/json
       "name": "Portfolio Website3",
       "url": "https://example3.com",
       "photos": [
-        { "id": "img001", "name": "portfolio-cover.jpg" },
+        { "id": "img001", "name": "portfolio-cover.png" },
         { "id": "img002", "name": "screenshot-homepage.jpg" }
       ]
     }
@@ -56,18 +56,18 @@ Content-Type: application/json
 
 
 ### deleteDeveloper by ID
-DELETE https://cse-341-project2-01q7.onrender.com/developers/692add7c9cab88f479fc243b HTTP/1.1
+DELETE https://cse-341-project2-01q7.onrender.com/developers/692d7e3133069074462639e4 HTTP/1.1
 
 
 
-### getSingle locations 
+### getAll locations 
 GET https://cse-341-project2-01q7.onrender.com/locations 
 
-### getSingle location local
-GET https://cse-341-project2-01q7.onrender.com/locations/692c96a8e0f120e0a2a87a13
+### getSingle location 
+GET https://cse-341-project2-01q7.onrender.com/locations/692ca15d7a3a006b5e269cf5
 
 
-### createLocation local
+### createLocation
 POST https://cse-341-project2-01q7.onrender.com/locations 
 Content-Type: application/json
 
@@ -84,8 +84,8 @@ Content-Type: application/json
 }
 
 
-### createLocation local
-PUT https://cse-341-project2-01q7.onrender.com/locations/692ca5d99a77ad7e60b5e307 HTTP/1.1
+### createLocation\
+PUT https://cse-341-project2-01q7.onrender.com/locations/692d7ef633069074462639e5 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -100,5 +100,5 @@ Content-Type: application/json
   "language": "English"
 }
 
-### createLocation local
-DELETE https://cse-341-project2-01q7.onrender.com/locations/692c96a8e0f120e0a2a87a13
+### createLocation 
+DELETE https://cse-341-project2-01q7.onrender.com/locations/692d7ef633069074462639e5

@@ -3,7 +3,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
     try {
-      //#swagger.tags=['Developers']
+      //#swagger.tags=['Locations']
       const result = await mongodb.getDatabase().db().collection('locations').find();
     result.toArray().then((locations) => {
       res.setHeader('Content-Type', 'application/json');
@@ -98,7 +98,7 @@ const createLocation = async (req, res) => {
 
 const updateLocation = async (req, res) => {
   try {
-    //#swagger.tags=['Developers']
+    //#swagger.tags=['Locations']
     const locationId = new ObjectId(req.params.id);
     const { city, state, country, flag, photo, continent, dialCode, currency, language } = req.body;
 
